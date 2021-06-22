@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<title>Estourando Balões</title>
+		<meta charset="utf-8">
+
+		<script language="Javascript">
+			
+			function iniciaJogo(){
+
+				var nivel_jogo = document.getElementById("nivel_jogo").value;//value não é uma função e sim um atributo
+
+				window.location.href = "jogo.html?" + nivel_jogo;//Esse recurso muda o link do arquivo, mudando assim a pagina
+				//O ponto de interrogação é importante pois significa que tudo que vem após ele não irá alterar o link
+			}
+		</script>
+	</head>
+	
+	<body>
+		<div>
+			
+			<p>
+				<b>Nível: </b>
+				<select id="nivel_jogo">
+					<option value="1">Fácil</option>
+					<option value="2">Médio</option>
+					<option value="3">Difícil</option>
+				</select>
+			</p>
+
+			<br>
+
+			<img src="imagens/iniciar.png" onclick="iniciaJogo()">
+		</div>
+	</body>
+</html>
